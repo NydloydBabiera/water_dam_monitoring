@@ -35,6 +35,11 @@ Partial Class RegistrationForm
         Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DGV_Residents = New System.Windows.Forms.DataGridView()
+        Me.firstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.middleName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lastName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.contactNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.address = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.btnDelete = New System.Windows.Forms.Button()
@@ -42,11 +47,6 @@ Partial Class RegistrationForm
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
-        Me.firstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.middleName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lastName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.contactNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.address = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DGV_Residents, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -86,7 +86,7 @@ Partial Class RegistrationForm
         '
         Me.txtAddress.Location = New System.Drawing.Point(139, 185)
         Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(565, 26)
+        Me.txtAddress.Size = New System.Drawing.Size(631, 26)
         Me.txtAddress.TabIndex = 8
         '
         'Label4
@@ -102,7 +102,7 @@ Partial Class RegistrationForm
         '
         Me.txtContact.Location = New System.Drawing.Point(139, 150)
         Me.txtContact.Name = "txtContact"
-        Me.txtContact.Size = New System.Drawing.Size(565, 26)
+        Me.txtContact.Size = New System.Drawing.Size(631, 26)
         Me.txtContact.TabIndex = 6
         '
         'Label3
@@ -118,7 +118,7 @@ Partial Class RegistrationForm
         '
         Me.txtLastName.Location = New System.Drawing.Point(139, 115)
         Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(565, 26)
+        Me.txtLastName.Size = New System.Drawing.Size(631, 26)
         Me.txtLastName.TabIndex = 4
         '
         'Label2
@@ -134,7 +134,7 @@ Partial Class RegistrationForm
         '
         Me.txtMiddleName.Location = New System.Drawing.Point(139, 80)
         Me.txtMiddleName.Name = "txtMiddleName"
-        Me.txtMiddleName.Size = New System.Drawing.Size(565, 26)
+        Me.txtMiddleName.Size = New System.Drawing.Size(631, 26)
         Me.txtMiddleName.TabIndex = 2
         '
         'Label1
@@ -150,7 +150,7 @@ Partial Class RegistrationForm
         '
         Me.txtFirstName.Location = New System.Drawing.Point(139, 45)
         Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(565, 26)
+        Me.txtFirstName.Size = New System.Drawing.Size(631, 26)
         Me.txtFirstName.TabIndex = 0
         '
         'GroupBox2
@@ -179,6 +179,46 @@ Partial Class RegistrationForm
         Me.DGV_Residents.Size = New System.Drawing.Size(755, 216)
         Me.DGV_Residents.TabIndex = 11
         '
+        'firstName
+        '
+        Me.firstName.DataPropertyName = "firstName"
+        Me.firstName.HeaderText = "First Name"
+        Me.firstName.Name = "firstName"
+        Me.firstName.ReadOnly = True
+        Me.firstName.Width = 150
+        '
+        'middleName
+        '
+        Me.middleName.DataPropertyName = "middleName"
+        Me.middleName.HeaderText = "Middle Name"
+        Me.middleName.Name = "middleName"
+        Me.middleName.ReadOnly = True
+        Me.middleName.Width = 150
+        '
+        'lastName
+        '
+        Me.lastName.DataPropertyName = "lastName"
+        Me.lastName.HeaderText = "Last Name"
+        Me.lastName.Name = "lastName"
+        Me.lastName.ReadOnly = True
+        Me.lastName.Width = 150
+        '
+        'contactNo
+        '
+        Me.contactNo.DataPropertyName = "contactNo"
+        Me.contactNo.HeaderText = "Contact"
+        Me.contactNo.Name = "contactNo"
+        Me.contactNo.ReadOnly = True
+        Me.contactNo.Width = 150
+        '
+        'address
+        '
+        Me.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.address.DataPropertyName = "address"
+        Me.address.HeaderText = "Address"
+        Me.address.Name = "address"
+        Me.address.ReadOnly = True
+        '
         'txtSearch
         '
         Me.txtSearch.Location = New System.Drawing.Point(15, 28)
@@ -193,7 +233,7 @@ Partial Class RegistrationForm
         Me.GroupBox3.Controls.Add(Me.btnEdit)
         Me.GroupBox3.Controls.Add(Me.btnSave)
         Me.GroupBox3.Controls.Add(Me.btnAdd)
-        Me.GroupBox3.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.GroupBox3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox3.Location = New System.Drawing.Point(18, 530)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(764, 64)
@@ -244,46 +284,6 @@ Partial Class RegistrationForm
         Me.btnAdd.TabIndex = 7
         Me.btnAdd.Text = "ADD"
         Me.btnAdd.UseVisualStyleBackColor = True
-        '
-        'firstName
-        '
-        Me.firstName.DataPropertyName = "firstName"
-        Me.firstName.HeaderText = "First Name"
-        Me.firstName.Name = "firstName"
-        Me.firstName.ReadOnly = True
-        Me.firstName.Width = 150
-        '
-        'middleName
-        '
-        Me.middleName.DataPropertyName = "middleName"
-        Me.middleName.HeaderText = "Middle Name"
-        Me.middleName.Name = "middleName"
-        Me.middleName.ReadOnly = True
-        Me.middleName.Width = 150
-        '
-        'lastName
-        '
-        Me.lastName.DataPropertyName = "lastName"
-        Me.lastName.HeaderText = "Last Name"
-        Me.lastName.Name = "lastName"
-        Me.lastName.ReadOnly = True
-        Me.lastName.Width = 150
-        '
-        'contactNo
-        '
-        Me.contactNo.DataPropertyName = "contactNo"
-        Me.contactNo.HeaderText = "Contact"
-        Me.contactNo.Name = "contactNo"
-        Me.contactNo.ReadOnly = True
-        Me.contactNo.Width = 150
-        '
-        'address
-        '
-        Me.address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.address.DataPropertyName = "address"
-        Me.address.HeaderText = "Address"
-        Me.address.Name = "address"
-        Me.address.ReadOnly = True
         '
         'RegistrationForm
         '
