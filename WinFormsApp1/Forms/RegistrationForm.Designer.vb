@@ -35,6 +35,7 @@ Partial Class RegistrationForm
         Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DGV_Residents = New System.Windows.Forms.DataGridView()
+        Me.resident_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.firstName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.middleName = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.lastName = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,8 +43,8 @@ Partial Class RegistrationForm
         Me.address = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
-        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnAdd = New System.Windows.Forms.Button()
@@ -68,7 +69,7 @@ Partial Class RegistrationForm
         Me.GroupBox1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(776, 227)
+        Me.GroupBox1.Size = New System.Drawing.Size(866, 227)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Registration"
@@ -160,7 +161,7 @@ Partial Class RegistrationForm
         Me.GroupBox2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 245)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(776, 285)
+        Me.GroupBox2.Size = New System.Drawing.Size(866, 285)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Data"
@@ -170,14 +171,21 @@ Partial Class RegistrationForm
         Me.DGV_Residents.AllowUserToAddRows = False
         Me.DGV_Residents.AllowUserToDeleteRows = False
         Me.DGV_Residents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGV_Residents.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.firstName, Me.middleName, Me.lastName, Me.contactNo, Me.address})
+        Me.DGV_Residents.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.resident_id, Me.firstName, Me.middleName, Me.lastName, Me.contactNo, Me.address})
         Me.DGV_Residents.Location = New System.Drawing.Point(15, 63)
         Me.DGV_Residents.Name = "DGV_Residents"
         Me.DGV_Residents.ReadOnly = True
         Me.DGV_Residents.RowHeadersVisible = False
         Me.DGV_Residents.RowTemplate.Height = 25
-        Me.DGV_Residents.Size = New System.Drawing.Size(755, 216)
+        Me.DGV_Residents.Size = New System.Drawing.Size(851, 216)
         Me.DGV_Residents.TabIndex = 11
+        '
+        'resident_id
+        '
+        Me.resident_id.DataPropertyName = "resident_id"
+        Me.resident_id.HeaderText = "ID"
+        Me.resident_id.Name = "resident_id"
+        Me.resident_id.ReadOnly = True
         '
         'firstName
         '
@@ -223,64 +231,64 @@ Partial Class RegistrationForm
         '
         Me.txtSearch.Location = New System.Drawing.Point(15, 28)
         Me.txtSearch.Name = "txtSearch"
-        Me.txtSearch.Size = New System.Drawing.Size(755, 26)
+        Me.txtSearch.Size = New System.Drawing.Size(851, 26)
         Me.txtSearch.TabIndex = 10
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.btnCancel)
         Me.GroupBox3.Controls.Add(Me.btnDelete)
-        Me.GroupBox3.Controls.Add(Me.btnUpdate)
         Me.GroupBox3.Controls.Add(Me.btnEdit)
         Me.GroupBox3.Controls.Add(Me.btnSave)
         Me.GroupBox3.Controls.Add(Me.btnAdd)
         Me.GroupBox3.Font = New System.Drawing.Font("Arial Narrow", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox3.Location = New System.Drawing.Point(18, 530)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(764, 64)
+        Me.GroupBox3.Size = New System.Drawing.Size(860, 64)
         Me.GroupBox3.TabIndex = 7
         Me.GroupBox3.TabStop = False
         '
+        'btnCancel
+        '
+        Me.btnCancel.Location = New System.Drawing.Point(662, 19)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(177, 34)
+        Me.btnCancel.TabIndex = 12
+        Me.btnCancel.Text = "CANCEL"
+        Me.btnCancel.UseVisualStyleBackColor = True
+        '
         'btnDelete
         '
-        Me.btnDelete.Location = New System.Drawing.Point(601, 19)
+        Me.btnDelete.Location = New System.Drawing.Point(488, 19)
         Me.btnDelete.Name = "btnDelete"
-        Me.btnDelete.Size = New System.Drawing.Size(138, 34)
+        Me.btnDelete.Size = New System.Drawing.Size(168, 34)
         Me.btnDelete.TabIndex = 11
         Me.btnDelete.Text = "DELETE"
         Me.btnDelete.UseVisualStyleBackColor = True
         '
-        'btnUpdate
-        '
-        Me.btnUpdate.Location = New System.Drawing.Point(457, 19)
-        Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(138, 34)
-        Me.btnUpdate.TabIndex = 10
-        Me.btnUpdate.Text = "UPDATE"
-        Me.btnUpdate.UseVisualStyleBackColor = True
-        '
         'btnEdit
         '
-        Me.btnEdit.Location = New System.Drawing.Point(313, 19)
+        Me.btnEdit.Location = New System.Drawing.Point(320, 19)
         Me.btnEdit.Name = "btnEdit"
-        Me.btnEdit.Size = New System.Drawing.Size(138, 34)
+        Me.btnEdit.Size = New System.Drawing.Size(162, 34)
         Me.btnEdit.TabIndex = 9
         Me.btnEdit.Text = "EDIT"
         Me.btnEdit.UseVisualStyleBackColor = True
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(169, 19)
+        Me.btnSave.Location = New System.Drawing.Point(165, 19)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(138, 34)
+        Me.btnSave.Size = New System.Drawing.Size(149, 34)
         Me.btnSave.TabIndex = 8
         Me.btnSave.Text = "SAVE"
         Me.btnSave.UseVisualStyleBackColor = True
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(25, 19)
+        Me.btnAdd.Location = New System.Drawing.Point(19, 19)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(138, 34)
+        Me.btnAdd.Size = New System.Drawing.Size(140, 34)
         Me.btnAdd.TabIndex = 7
         Me.btnAdd.Text = "ADD"
         Me.btnAdd.UseVisualStyleBackColor = True
@@ -289,7 +297,7 @@ Partial Class RegistrationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 606)
+        Me.ClientSize = New System.Drawing.Size(890, 606)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox3)
@@ -321,10 +329,11 @@ Partial Class RegistrationForm
     Friend WithEvents txtSearch As TextBox
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents btnDelete As Button
-    Friend WithEvents btnUpdate As Button
     Friend WithEvents btnEdit As Button
     Friend WithEvents btnSave As Button
     Friend WithEvents btnAdd As Button
+    Friend WithEvents btnCancel As Button
+    Friend WithEvents resident_id As DataGridViewTextBoxColumn
     Friend WithEvents firstName As DataGridViewTextBoxColumn
     Friend WithEvents middleName As DataGridViewTextBoxColumn
     Friend WithEvents lastName As DataGridViewTextBoxColumn
